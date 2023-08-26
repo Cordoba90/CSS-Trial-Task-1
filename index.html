@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Responsive Animated Webpage</title>
+  <style>
+    :root {
+      --primary-color: #3366cc;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: var(--primary-color);
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 36px;
+    }
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .content-box {
+      padding: 20px;
+      background: linear-gradient(to bottom right, var(--primary-color), #ffffff);
+      color: #000000;
+      animation: pulse 1s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    footer {
+      background-color: #333333;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+    }
+    @media screen and (max-width: 768px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+    }
+    .content-box:nth-child(even) {
+      background: linear-gradient(to bottom right, #ffffff, var(--primary-color));
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Responsive Animated Webpage</h1>
+  </header>
+  <main>
+    <div class="content-box">
+      <h2>Content Box 1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="content-box">
+      <h2>Content Box 2</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="content-box">
+      <h2>Content Box 3</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="content-box">
+      <h2>Content Box 4</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </main>
+  <footer>
+    <p>© 2023 Freiheit. All rights reserved.</p>
+  </footer>
+</body>
+</html>
